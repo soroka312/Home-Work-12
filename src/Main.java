@@ -1,30 +1,30 @@
 public class Main {
     public static void main(String[] args) {
 
-        Author author1 = new Author("Маргарет", "Митчелл");
-        Book book1 = new Book("Унесённые ветром", author1, 1936);
+        Author[] author = {new Author("Маргарет", "Митчелл"),
+                new Author("Анджей", "Сапковский")};
+        Book[] book = {new Book("Унесённые ветром", author[0], 1936),
+                new Book("Последнее желание", author[1], 1996)};
 
-        System.out.println("Имя автора: " + author1.getName());
-        System.out.println("Фамилия автора: " + author1.getSurname());
+        System.out.println("Имя автора: " + author[0].getName());
+        System.out.println("Фамилия автора: " + author[0].getSurname());
 
-        System.out.println("Название: " + book1.getTitle());
-        System.out.println("Автор: " + book1.getAuthor());
-        System.out.println("Год: " + book1.getYear());
+        System.out.println("Название: " + book[0].getTitle());
+        System.out.println("Автор: " + book[0].getAuthor());
+        System.out.println("Год: " + book[0].getYear());
+
+        System.out.println(book[0]);
 
 
-        System.out.println(book1);
+        book[1].setYear(1986);
 
-        Author author2 = new Author("Анджей", "Сапковский");
-        Book book2 = new Book("Последнее желание", author2, 1996);
-        book2.setYear(1986);
+        System.out.println("Имя автора: " + author[1].getName());
+        System.out.println("Фамилия автора: " + author[1].getSurname());
 
-        System.out.println("Имя автора: " + author2.getName());
-        System.out.println("Фамилия автора: " + author2.getSurname());
+        System.out.println("Название: " + book[1].getTitle());
+        System.out.println("Автор: " + book[1].getAuthor());
+        System.out.println("Год: " + book[1].getYear());
 
-        System.out.println("Название: " + book2.getTitle());
-        System.out.println("Автор: " + book2.getAuthor());
-        System.out.println("Год: " + book2.getYear());
-
-        System.out.println(book2);
+        System.out.println(book[1]);
     }
 }
