@@ -26,5 +26,11 @@ public class Main {
         System.out.println("Год: " + book[1].getYear());
 
         System.out.println(book[1]);
+
+        System.out.println(author[0].equals(author[1]));
+        System.out.println(book[0].equals(book[1]));
+
+        System.out.println(author[0].hashCode() + " " + author[1].hashCode());
+        System.out.println(book[0].hashCode() + " " + book[1].hashCode());
     }
 }
